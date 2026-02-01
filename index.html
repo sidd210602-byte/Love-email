@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>An Email ❤️</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    body {
+      font-family: Arial;
+      text-align: center;
+      margin-top: 60px;
+    }
+    button {
+      padding: 15px 30px;
+      font-size: 18px;
+      margin: 20px;
+    }
+    #no {
+      position: absolute;
+    }
+  </style>
+</head>
+
+<body>
+
+<h3>An email has been sent 📩</h3>
+<h2>Will you be my girlfriend? ❤️</h2>
+
+<button onclick="yesClicked()">YES</button>
+<button id="no">NO</button>
+
+<script>
+  const noBtn = document.getElementById("no");
+
+  noBtn.addEventListener("mouseover", moveNo);
+  noBtn.addEventListener("touchstart", moveNo);
+
+  function moveNo() {
+    const x = Math.random() * (window.innerWidth - 120);
+    const y = Math.random() * (window.innerHeight - 120);
+    noBtn.style.left = x + "px";
+    noBtn.style.top = y + "px";
+  }
+
+  function yesClicked() {
+    alert("I knew it ❤️\nSome answers are meant to be YES forever.");
+  }
+</script>
+
+</body>
+</html>
